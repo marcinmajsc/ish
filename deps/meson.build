@@ -19,7 +19,7 @@ if get_option('kernel') == 'linux'
     build_linux = custom_target('linux',
         command: [
             'env',
-            'HOSTCC='+ ' '.join(meson.get_compiler('c', native: true).cmd_array() + get_option('build.c_args')),
+            'HOSTCC='+ ' '.join(meson.get_compiler('c', native: true).cmd_array() + get_option('c_args')),
             'CC='+ ' '.join(meson.get_compiler('c', native: false).cmd_array() + get_option('c_args')),
             # hack to find the right directories because meson is bad
             'ISH_SRC='+ meson.project_source_root(),
