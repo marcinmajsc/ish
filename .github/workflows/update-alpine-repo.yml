@@ -6,7 +6,6 @@ on:
 
 jobs:
   update:
-    if: github.repository == 'ish-app/ish'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
